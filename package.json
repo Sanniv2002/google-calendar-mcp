@@ -1,0 +1,26 @@
+{
+  "name": "s3-indexer",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.0.15"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.848.0",
+    "@aws-sdk/types": "^3.840.0",
+    "@googleapis/calendar": "^11.0.1",
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "dotenv": "^17.2.0",
+    "googleapis": "^154.0.0",
+    "zod": "^4.0.5"
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir ./build",
+    "dev": "bun run --watch index.ts",
+    "start": "bun run build/index.js"
+  }
+}
